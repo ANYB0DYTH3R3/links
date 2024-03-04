@@ -10,6 +10,11 @@
             background-color: #2d2d2d;
             color: #fff;
             padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
         }
 
         h1 {
@@ -34,41 +39,81 @@
     </style>
 </head>
 <body>
-    <h1>Admin Page</h1>
+    <div class="container">
+        <h1>Admin Page</h1>
 
-    <h2>Password Protected</h2>
-    <form>
-        <label for="password">Enter Password:</label>
-        <input type="password" id="password" name="password" required>
-        <br>
-        <h2>Update Main Page Links:</h2>
-        <label for="aiChatLink">AI Chat Service:</label>
-        <input type="text" id="aiChatLink" name="aiChatLink" placeholder="New link for AI Chat Service" required>
-        <br>
-        <label for="fluffyCupcakeLink">Fluffy-Cupcake:</label>
-        <input type="text" id="fluffyCupcakeLink" name="fluffyCupcakeLink" placeholder="New link for Fluffy-Cupcake" required>
-        <!-- Add similar input fields for other links -->
-        <br>
-        <button type="button" onclick="updateLinks()">Submit</button>
-    </form>
+        <h2>Password Protected</h2>
+        <form>
+            <label for="password">Enter Password:</label>
+            <input type="password" id="password" name="password" required>
+            <br>
+            <h2>Update Main Page Links:</h2>
+            <label for="aiChatLink">AI Chat Service:</label>
+            <input type="text" id="aiChatLink" name="aiChatLink" placeholder="New link for AI Chat Service" required>
+            <br>
+            <label for="fluffyCupcakeLink">Fluffy-Cupcake:</label>
+            <input type="text" id="fluffyCupcakeLink" name="fluffyCupcakeLink" placeholder="New link for Fluffy-Cupcake" required>
+            <br>
+            <label for="htUbGamesLink">HT's UB games:</label>
+            <input type="text" id="htUbGamesLink" name="htUbGamesLink" placeholder="New link for HT's UB games" required>
+            <br>
+            <label for="htGbaGamesLink">HT GBA Games:</label>
+            <input type="text" id="htGbaGamesLink" name="htGbaGamesLink" placeholder="New link for HT GBA Games" required>
+            <br>
+            <label for="3kh0Link">3kh0:</label>
+            <input type="text" id="3kh0Link" name="3kh0Link" placeholder="New link for 3kh0" required>
+            <br>
+            <label for="absolutelyNothingLink">Absolutely Nothing:</label>
+            <input type="text" id="absolutelyNothingLink" name="absolutelyNothingLink" placeholder="New link for Absolutely Nothing" required>
+            <br>
+            <label for="minecraftLink">Minecraft:</label>
+            <input type="text" id="minecraftLink" name="minecraftLink" placeholder="New link for Minecraft" required>
+            <br>
+            <label for="weGameLink">We Game:</label>
+            <input type="text" id="weGameLink" name="weGameLink" placeholder="New link for We Game" required>
+            <br>
+            <label for="webChatLink">Web Chat:</label>
+            <input type="text" id="webChatLink" name="webChatLink" placeholder="New link for Web Chat" required>
+            <br>
+            <button type="button" onclick="updateLinks()">Submit</button>
+        </form>
 
-    <script>
-        function updateLinks() {
-            // Add your password validation logic here
-            // For simplicity, it's not implemented in this example
+        <script>
+            function updateLinks() {
+                const enteredPassword = document.getElementById('password').value;
 
-            // Get the new links from the input fields
-            const aiChatLink = document.getElementById('aiChatLink').value;
-            const fluffyCupcakeLink = document.getElementById('fluffyCupcakeLink').value;
-            // Add similar code for other links
+                // Replace 'yourSecurePassword' with your actual password
+                const correctPassword = '329220';
 
-            // Update the links on the main page
-            document.getElementById('ai-chat').setAttribute('href', aiChatLink);
-            document.getElementById('fluffy-cupcake').setAttribute('href', fluffyCupcakeLink);
-            // Add similar code for other links
+                if (enteredPassword === correctPassword) {
+                    // Get the new links from the input fields
+                    const aiChatLink = document.getElementById('aiChatLink').value;
+                    const fluffyCupcakeLink = document.getElementById('fluffyCupcakeLink').value;
+                    const htUbGamesLink = document.getElementById('htUbGamesLink').value;
+                    const htGbaGamesLink = document.getElementById('htGbaGamesLink').value;
+                    const kh0Link = document.getElementById('3kh0Link').value;
+                    const absolutelyNothingLink = document.getElementById('absolutelyNothingLink').value;
+                    const minecraftLink = document.getElementById('minecraftLink').value;
+                    const weGameLink = document.getElementById('weGameLink').value;
+                    const webChatLink = document.getElementById('webChatLink').value;
 
-            alert("Links updated successfully");
-        }
-    </script>
+                    // Update the links on the main page
+                    document.getElementById('ai-chat').setAttribute('href', aiChatLink);
+                    document.getElementById('fluffy-cupcake').setAttribute('href', fluffyCupcakeLink);
+                    document.getElementById('ht-ub-games').setAttribute('href', htUbGamesLink);
+                    document.getElementById('ht-gba-games').setAttribute('href', htGbaGamesLink);
+                    document.getElementById('3kh0').setAttribute('href', kh0Link);
+                    document.getElementById('absolutely-nothing').setAttribute('href', absolutelyNothingLink);
+                    document.getElementById('minecraft').setAttribute('href', minecraftLink);
+                    document.getElementById('we-game').setAttribute('href', weGameLink);
+                    document.getElementById('web-chat').setAttribute('href', webChatLink);
+
+                    alert("Links updated successfully");
+                } else {
+                    alert("Incorrect password. Access denied.");
+                }
+            }
+        </script>
+    </div>
 </body>
 </html>
