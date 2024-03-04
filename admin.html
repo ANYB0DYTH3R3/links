@@ -79,41 +79,41 @@
         </form>
 
         <script>
-    function updateLinks() {
-        const enteredPassword = document.getElementById('password').value;
+            function updateLinks() {
+                const enteredPassword = document.getElementById('password').value;
 
-        // Replace 'yourSecurePassword' with your actual password
-        const correctPassword = '329220';
+                // Replace 'yourSecurePassword' with your actual password
+                const correctPassword = 'yourSecurePassword';
 
-        if (enteredPassword === correctPassword) {
-            // Get the new links from the input fields
-            const aiChatLink = document.getElementById('aiChatLink').value;
-            const fluffyCupcakeLink = document.getElementById('fluffyCupcakeLink').value;
-            const htUbGamesLink = document.getElementById('htUbGamesLink').value;
-            const htGbaGamesLink = document.getElementById('htGbaGamesLink').value;
-            const kh0Link = document.getElementById('3kh0Link').value;
-            const absolutelyNothingLink = document.getElementById('absolutelyNothingLink').value;
-            const minecraftLink = document.getElementById('minecraftLink').value;
-            const weGameLink = document.getElementById('weGameLink').value;
-            const webChatLink = document.getElementById('webChatLink').value;
+                if (enteredPassword === correctPassword) {
+                    // Get the new links from the input fields
+                    const aiChatLink = document.getElementById('aiChatLink').value;
+                    const fluffyCupcakeLink = document.getElementById('fluffyCupcakeLink').value;
+                    const htUbGamesLink = document.getElementById('htUbGamesLink').value;
+                    const htGbaGamesLink = document.getElementById('htGbaGamesLink').value;
+                    const kh0Link = document.getElementById('3kh0Link').value;
+                    const absolutelyNothingLink = document.getElementById('absolutelyNothingLink').value;
+                    const minecraftLink = document.getElementById('minecraftLink').value;
+                    const weGameLink = document.getElementById('weGameLink').value;
+                    const webChatLink = document.getElementById('webChatLink').value;
 
-            // Update the links on the main page
-            document.getElementById('ai-chat').setAttribute('href', aiChatLink);
-            document.getElementById('fluffy-cupcake').setAttribute('href', fluffyCupcakeLink);
-            document.getElementById('ht-ub-games').setAttribute('href', htUbGamesLink);
-            document.getElementById('ht-gba-games').setAttribute('href', htGbaGamesLink);
-            document.getElementById('3kh0').setAttribute('href', kh0Link);
-            document.getElementById('absolutely-nothing').setAttribute('href', absolutelyNothingLink);
-            document.getElementById('minecraft').setAttribute('href', minecraftLink);
-            document.getElementById('we-game').setAttribute('href', weGameLink);
-            document.getElementById('web-chat').setAttribute('href', webChatLink);
+                    // Update the links on the main page
+                    document.getElementById('ai-chat').setAttribute('href', aiChatLink);
+                    document.getElementById('fluffy-cupcake').setAttribute('href', fluffyCupcakeLink);
+                    document.getElementById('ht-ub-games').setAttribute('href', htUbGamesLink);
+                    document.getElementById('ht-gba-games').setAttribute('href', htGbaGamesLink);
+                    document.getElementById('3kh0').setAttribute('href', kh0Link);
+                    document.getElementById('absolutely-nothing').setAttribute('href', absolutelyNothingLink);
+                    document.getElementById('minecraft').setAttribute('href', minecraftLink);
+                    document.getElementById('we-game').setAttribute('href', weGameLink);
+                    document.getElementById('web-chat').setAttribute('href', webChatLink);
 
-            alert("Links updated successfully");
-        } else {
-            alert("Incorrect password. Access denied.");
-        }
-    }
-</script>
+                    alert("Links updated successfully");
+                } else {
+                    alert("Incorrect password. Access denied.");
+                }
+            }
+        </script>
     </div>
 </body>
 </html>
