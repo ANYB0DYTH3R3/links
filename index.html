@@ -5,8 +5,73 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Unblocked Games</title>
     <style>
-        /* Your existing styles here */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #222;
+            color: #fff;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        h1 {
+            color: #6f00ff;
+        }
+
+        h2, h3 {
+            color: #00a0e0;
+        }
+
+        a {
+            color: #00a0e0;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .container {
+            width: 80%;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .admin-link {
+            color: #a9a9a9;
+        }
+
+        .link-container {
+            background-color: #333;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            overflow: hidden;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        .link-container a {
+            display: block;
+            padding: 10px;
+            margin: 5px 0;
+            background-color: #444;
+            color: #fff;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .link-container a:hover {
+            background-color: #555;
+        }
     </style>
+    <script>
+        function cloakedRedirect(linkId, cloakedLink) {
+            document.getElementById(linkId).setAttribute('href', cloakedLink);
+        }
+    </script>
 </head>
 <body>
     <div class="container">
@@ -23,21 +88,22 @@
         </ul>
 
         <h2>All sites are listed with their netlify codename</h2>
-        <ol>
-            <li><a id="ai-chat" href="PUT YOUR NEW AI CHAT LINK HERE" target="_blank">Ai chat service</a> - alt: <a id="ai-chat-alt" href="PUT YOUR NEW AI CHAT ALT LINK HERE" target="_blank">Ai chat service alt link</a>: Must login with GitHub for security purposes</li>
-            <li><a id="fluffy-cupcake" href="PUT YOUR NEW FLUFFY CUPCAKE LINK HERE" target="_blank">Fluffy-Cupcake</a></li>
-            <li><a id="ht-ub-games" href="PUT YOUR NEW HT UB GAMES LINK HERE" target="_blank">HT's UB games</a></li>
-            <li><a id="ht-gba-games" href="PUT YOUR NEW HT GBA GAMES LINK HERE" target="_blank">HT GBA Games</a></li>
-            <li><a id="3kh0" href="PUT YOUR NEW 3KH0 LINK HERE" target="_blank">3kh0</a></li>
-            <li><a id="absolutely-nothing" href="PUT YOUR NEW ABSOLUTELY NOTHING LINK HERE" target="_blank">Absolutely Nothing</a></li>
-            <li><a id="minecraft" href="PUT YOUR NEW MINECRAFT LINK HERE" target="_blank">Minecraft</a></li>
-            <li><a id="we-game" href="PUT YOUR NEW WE GAME LINK HERE" target="_blank">We Game</a></li>
-        </ol>
+        <div class="link-container">
+            <a id="ai-chat" href="PUT YOUR AI CHAT LINK HERE" target="_blank">Ai chat service</a>
+            <a id="fluffy-cupcake" href="PUT YOUR FLUFFY CUPCAKE LINK HERE" target="_blank">Fluffy-Cupcake</a>
+            <a id="ht-ub-games" href="PUT YOUR HT UB GAMES LINK HERE" target="_blank">HT's UB games</a>
+            <a id="ht-gba-games" href="PUT YOUR HT GBA GAMES LINK HERE" target="_blank">HT GBA Games</a>
+            <a id="3kh0" href="PUT YOUR 3KH0 LINK HERE" target="_blank">3kh0</a>
+            <a id="absolutely-nothing" href="PUT YOUR ABSOLUTELY NOTHING LINK HERE" target="_blank">Absolutely Nothing</a>
+            <a id="minecraft" href="PUT YOUR MINECRAFT LINK HERE" target="_blank">Minecraft</a>
+            <a id="we-game" href="PUT YOUR WE GAME LINK HERE" target="_blank">We Game</a>
+            <a id="web-chat" href="PUT YOUR WEB CHAT LINK HERE" target="_blank">Web Chat</a>
+        </div>
 
         <h2>Open Beta sites:</h2>
-        <ol>
-            <li><a id="web-chat" href="PUT YOUR NEW WEB CHAT LINK HERE" target="_blank">Web Chat</a>: This isn't my site. It works. I am currently working on deploying my own; just need to adjust some code</li>
-        </ol>
+        <div class="link-container">
+            <a id="web-chat-beta" href="PUT YOUR WEB CHAT BETA LINK HERE" target="_blank">Web Chat (Beta)</a>
+        </div>
 
         <div class="admin-link">
             <p>If you want to change these links more easily, consider implementing a password-protected admin page. Alternatively, directly update the links in the code.</p>
@@ -46,27 +112,11 @@
         <!-- Placeholder for terms of service section -->
         <h3 id="terms">Terms of Service</h3>
         <p>Insert your terms of service here.</p>
-        <center>
- <table align="center" cellspacing="0" cellpadding="0" width="100%">
-   <tr>
-     <td align="center" style="padding: 10px;">
-       <table border="0" class="mobile-button" cellspacing="0" cellpadding="0">
-         <tr>
-           <td align="center" bgcolor="#7937fd" style="background-color: #7937fd; margin: auto; max-width: 600px; -webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px; padding: 15px 20px; " width="100%">
-           <!--[if mso]>&nbsp;<![endif]-->
-               <a href="/tos" target="_blank" style="16px; font-family: Helvetica, Arial, sans-serif; color: #ffffff; font-weight:normal; text-align:center; background-color: #7937fd; text-decoration: none; border: none; -webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px; display: inline-block;">
-                   <span style="font-size: 16px; font-family: Helvetica, Arial, sans-serif; color: #ffffff; font-weight:normal; line-height:1.5em; text-align:center;">Click Here</span>
-             </a>
-           <!--[if mso]>&nbsp;<![endif]-->
-           </td>
-         </tr>
-       </table>
-     </td>
-   </tr>
- </table>
-</center>
     </div>
-    <!--Button-->
 
+    <!-- Example of cloaked redirect -->
+    <script>
+        cloakedRedirect('web-chat-beta', 'https://example.com/hidden-web-chat');
+    </script>
 </body>
 </html>
