@@ -66,10 +66,37 @@
         .link-container a:hover {
             background-color: #555;
         }
+
+        .terms-button {
+            background-color: #00a0e0;
+            color: #fff;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .tos-button {
+            background-color: #a9a9a9;
+            color: #fff;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
     </style>
     <script>
         function cloakedRedirect(linkId, cloakedLink) {
             document.getElementById(linkId).setAttribute('href', cloakedLink);
+        }
+
+        function scrollToTerms() {
+            document.getElementById('terms').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        function openTos() {
+            window.location.href = 'https://not-games.netlify.app/tos';
         }
     </script>
 </head>
@@ -78,7 +105,7 @@
         <h1>Unblocked Games</h1>
 
         <h2>Some Important things first:</h2>
-        <p><a href="#terms" id="tos-link">Read our terms of service</a></p>
+        <p><a href="javascript:void(0);" onclick="scrollToTerms()" class="terms-button">Read our terms of service</a></p>
         <p>Just to make it clear I did not make these websites. I am just hosting a private link off my own server. I will be adding more sites soon.</p>
 
         <h2>Updates:</h2>
@@ -89,15 +116,15 @@
 
         <h2>All sites are listed with their netlify codename</h2>
         <div class="link-container">
-            <a id="ai-chat" href="PUT YOUR AI CHAT LINK HERE" target="_blank">Ai chat service</a>
-            <a id="fluffy-cupcake" href="PUT YOUR FLUFFY CUPCAKE LINK HERE" target="_blank">Fluffy-Cupcake</a>
-            <a id="ht-ub-games" href="PUT YOUR HT UB GAMES LINK HERE" target="_blank">HT's UB games</a>
-            <a id="ht-gba-games" href="PUT YOUR HT GBA GAMES LINK HERE" target="_blank">HT GBA Games</a>
-            <a id="3kh0" href="PUT YOUR 3KH0 LINK HERE" target="_blank">3kh0</a>
-            <a id="absolutely-nothing" href="PUT YOUR ABSOLUTELY NOTHING LINK HERE" target="_blank">Absolutely Nothing</a>
-            <a id="minecraft" href="PUT YOUR MINECRAFT LINK HERE" target="_blank">Minecraft</a>
-            <a id="we-game" href="PUT YOUR WE GAME LINK HERE" target="_blank">We Game</a>
-            <a id="web-chat" href="PUT YOUR WEB CHAT LINK HERE" target="_blank">Web Chat</a>
+            <a id="ai-chat" href="https://nextjs-chat3-nine.vercel.app/" target="_blank">Ai chat service</a>
+            <a id="fluffy-cupcake" href="https://fluffy-cupcake-74f27a.netlify.app" target="_blank">Fluffy-Cupcake</a>
+            <a id="ht-ub-games" href="https://unblock-my-stuff.netlify.app/" target="_blank">HT's UB games</a>
+            <a id="ht-gba-games" href="http://watch-ewing-block-this.netlify.app" target="_blank">HT GBA Games</a>
+            <a id="3kh0" href="https://bright-wisp-83d563.netlify.app/" target="_blank">3kh0</a>
+            <a id="absolutely-nothing" href="https://123-do-not-block-me.netlify.app/" target="_blank">Absolutely Nothing</a>
+            <a id="minecraft" href="https://hey-ewing-this-is-not-minecraft.netlify.app/" target="_blank">Minecraft</a>
+            <a id="we-game" href="http://we-game.netlify.app" target="_blank">We Game</a>
+            <a id="web-chat" href="https://web-chat-app-brown.vercel.app/" target="_blank">Web Chat</a>
         </div>
 
         <h2>Open Beta sites:</h2>
@@ -106,12 +133,15 @@
         </div>
 
         <div class="admin-link">
-            <p>If you want to change these links more easily, consider implementing a password-protected admin page. Alternatively, directly update the links in the code.</p>
+            <p>Admin page curently being worked on for faster link upload.</p>
         </div>
 
         <!-- Placeholder for terms of service section -->
         <h3 id="terms">Terms of Service</h3>
         <p>Insert your terms of service here.</p>
+
+        <!-- Button to not-games.netlify.app/tos -->
+        <button class="tos-button" onclick="openTos()">Terms of Service</button>
     </div>
 
     <!-- Example of cloaked redirect -->
