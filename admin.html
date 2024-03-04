@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Page</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #2d2d2d;
+            color: #fff;
+            padding: 20px;
+        }
+
+        h1 {
+            color: #6f00ff;
+        }
+
+        h2 {
+            color: #00a0e0;
+        }
+
+        input {
+            padding: 5px;
+            margin-bottom: 10px;
+        }
+
+        button {
+            padding: 10px;
+            background-color: #00a0e0;
+            color: #fff;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Admin Page</h1>
+
+    <h2>Password Protected</h2>
+    <form>
+        <label for="password">Enter Password:</label>
+        <input type="password" id="password" name="password" required>
+        <br>
+        <h2>Update Main Page Links:</h2>
+        <label for="aiChatLink">AI Chat Service:</label>
+        <input type="text" id="aiChatLink" name="aiChatLink" placeholder="New link for AI Chat Service" required>
+        <br>
+        <label for="fluffyCupcakeLink">Fluffy-Cupcake:</label>
+        <input type="text" id="fluffyCupcakeLink" name="fluffyCupcakeLink" placeholder="New link for Fluffy-Cupcake" required>
+        <!-- Add similar input fields for other links -->
+        <br>
+        <button type="button" onclick="updateLinks()">Submit</button>
+    </form>
+
+    <script>
+        function updateLinks() {
+            // Add your password validation logic here
+            // For simplicity, it's not implemented in this example
+
+            // Get the new links from the input fields
+            const aiChatLink = document.getElementById('aiChatLink').value;
+            const fluffyCupcakeLink = document.getElementById('fluffyCupcakeLink').value;
+            // Add similar code for other links
+
+            // Update the links on the main page
+            document.getElementById('ai-chat').setAttribute('href', aiChatLink);
+            document.getElementById('fluffy-cupcake').setAttribute('href', fluffyCupcakeLink);
+            // Add similar code for other links
+
+            alert("Links updated successfully");
+        }
+    </script>
+</body>
+</html>
