@@ -100,9 +100,6 @@
 
     </style>
     <script>
-        function cloakedRedirect(linkId, cloakedLink) {
-            document.getElementById(linkId).setAttribute('href', cloakedLink);
-        }
 
         function scrollToTerms() {
             document.getElementById('terms').scrollIntoView({ behavior: 'smooth' });
@@ -160,10 +157,5 @@
 
         <button class="tos-button" onclick="toggleDarkMode()">Toggle Dark Mode</button>
     </div>
-
-    <!-- Example of cloaked redirect -->
-    <script>
-        cloakedRedirect('web-chat-beta', 'https://example.com/hidden-web-chat');
-    </script>
 </body>
 </html>
